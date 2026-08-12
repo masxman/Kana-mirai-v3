@@ -117,54 +117,58 @@ export default function Hero() {
       {/* ── Black cinematic opener ── */}
       <div ref={coverRef} className="absolute inset-0 z-[2] bg-[#070708]" />
 
-      {/* ── Content Layout: flex-col, content at ~30vh, buttons near bottom ── */}
+      {/* ── Content Layout ── */}
       <div className="absolute inset-0 z-10 flex flex-col px-5 sm:px-8 xl:px-14">
 
-        {/* Spacer — pushes tag/headline to ~28% from top */}
-        <div style={{ flex: "0 0 28svh" }} />
+        {/* Top spacer — accounts for fixed nav + pushes tag into photo */}
+        {/* Mobile: 28svh pushes into photo nicely. Desktop: 18svh is enough since nav is small relative to viewport */}
+        <div className="h-[28svh] lg:h-[22svh]" />
 
-        {/* Tag pill */}
+        {/* Wrapper — limits width on desktop so building shows on right */}
+        <div className="max-w-full lg:max-w-[52%] xl:max-w-[46%]">
         <div ref={tagRef} className="inline-flex self-start items-center gap-2.5 bg-black/25 backdrop-blur-md border border-white/12 text-white font-mono text-[0.6rem] sm:text-[0.7rem] uppercase tracking-[0.22em] px-3.5 py-2 rounded-full mb-5 sm:mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_7px_rgba(16,185,129,0.9)] animate-pulse flex-shrink-0" />
-          Bengaluru //&nbsp;
-          <span ref={scramble} className="text-white/75">Integrated FM</span>
-        </div>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_7px_rgba(16,185,129,0.9)] animate-pulse flex-shrink-0" />
+            Bengaluru //&nbsp;
+            <span ref={scramble} className="text-white/75">Integrated FM</span>
+          </div>
 
-        {/* Headline */}
-        <h1 className="font-sans font-extrabold leading-[0.95] tracking-[-0.03em] mb-5 sm:mb-6"
-          style={{ fontSize: "clamp(2.6rem, 9.5vw, 6.5rem)" }}>
-          <span className="block overflow-hidden">
-            <span ref={l1} className="block text-white">Your Building</span>
-          </span>
-          <span className="block overflow-hidden">
-            <span ref={l2} className="block text-white">Is Built.</span>
-          </span>
-          <span className="block overflow-hidden mt-1">
-            <span ref={l3} className="block italic text-[#10B981]">Now Who Runs It?</span>
-          </span>
-        </h1>
+          {/* Headline */}
+          <h1 className="font-sans font-extrabold leading-[0.95] tracking-[-0.03em] mb-5 sm:mb-6"
+            style={{ fontSize: "clamp(2.6rem, 7.5vw, 4.8rem)" }}>
+            <span className="block overflow-hidden">
+              <span ref={l1} className="block text-white">Your Building</span>
+            </span>
+            <span className="block overflow-hidden">
+              <span ref={l2} className="block text-white">Is Built.</span>
+            </span>
+            <span className="block overflow-hidden mt-1">
+              <span ref={l3} className="block italic text-[#10B981]">Now Who Runs It?</span>
+            </span>
+          </h1>
 
-        {/* Description */}
-        <p ref={descRef} className="font-sans text-[0.95rem] sm:text-base text-white/72 leading-relaxed max-w-[380px] sm:max-w-[440px]">
-          From possession to handover to long-term management — Kana Mirai is your{" "}
-          <strong className="font-bold text-white">single point of accountability</strong>{" "}
-          for residential communities.
-        </p>
+          {/* Description */}
+          <p ref={descRef} className="font-sans text-[0.9rem] sm:text-[0.95rem] lg:text-base text-white/72 leading-relaxed max-w-[360px] sm:max-w-[420px] lg:max-w-[440px] mb-0">
+            From possession to handover to long-term management — Kana Mirai is your{" "}
+            <strong className="font-bold text-white">single point of accountability</strong>{" "}
+            for residential communities.
+          </p>
 
-        {/* Flex gap — shows the building photo between desc and buttons */}
-        <div className="flex-1" style={{ minHeight: "6svh", maxHeight: "16svh" }} />
+          {/* Flex gap */}
+          <div className="flex-1" style={{ minHeight: "5svh", maxHeight: "14svh" }} />
 
-        {/* Buttons */}
-        <div ref={btnsRef} className="flex flex-col items-start gap-3 pb-10 sm:pb-14">
-          <Btn href="#solutions" variant="primary">
-            I&apos;m a Builder
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-              <path d="M2.5 7.5h10M8.5 3.5l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-            </svg>
-          </Btn>
-          <Btn href="#solutions" variant="outline">
-            I&apos;m an Association
-          </Btn>
+          {/* Buttons */}
+          <div ref={btnsRef} className="flex flex-col items-start gap-3 pb-10 sm:pb-14 lg:pb-16">
+            <Btn href="#solutions" variant="primary">
+              I&apos;m a Builder
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <path d="M2.5 7.5h10M8.5 3.5l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </Btn>
+            <Btn href="#solutions" variant="outline">
+              I&apos;m an Association
+            </Btn>
+          </div>
+
         </div>
       </div>
     </section>

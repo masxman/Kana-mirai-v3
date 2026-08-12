@@ -52,10 +52,10 @@ function Btn({ href, children, variant = "primary" }: {
     return () => { el.removeEventListener("mousemove", onMove); el.removeEventListener("mouseleave", onLeave); };
   }, [onMove, onLeave]);
 
-  const base = "inline-flex items-center justify-center gap-2 font-bold text-[0.9rem] px-7 py-[14px] rounded-xl cursor-pointer select-none transition-all";
+  const base = "inline-flex items-center justify-center gap-2 font-bold text-[0.95rem] px-7 py-4 rounded-xl cursor-pointer select-none transition-all w-full sm:w-auto sm:min-w-[220px]";
   const styles = variant === "primary"
-    ? `${base} bg-[#10B981] hover:bg-emerald-400 text-[#070708] min-w-[200px]`
-    : `${base} bg-transparent border border-white/35 hover:border-white/60 text-white min-w-[200px]`;
+    ? `${base} bg-[#10B981] hover:bg-emerald-400 text-[#070708]`
+    : `${base} bg-transparent border border-white/35 hover:border-white/60 text-white`;
 
   return <a ref={ref} href={href} className={styles}>{children}</a>;
 }
@@ -180,12 +180,9 @@ export default function Hero() {
             </p>
 
             {/* Buttons pushed to bottom using mt-auto */}
-            <div ref={btnsRef} className="mt-auto pt-6 flex flex-col items-start gap-3">
+            <div ref={btnsRef} className="mt-auto pt-6 flex flex-col items-start gap-4 w-full sm:w-auto">
               <Btn href="#solutions" variant="primary">
-                I&apos;m a Builder
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
-                  <path d="M2.5 7.5h10M8.5 3.5l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-                </svg>
+                I&apos;m a Builder &rarr;
               </Btn>
               <Btn href="#solutions" variant="outline">
                 I&apos;m an Association

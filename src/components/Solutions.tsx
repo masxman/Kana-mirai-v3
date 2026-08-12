@@ -97,12 +97,13 @@ export default function Solutions() {
       <div
         ref={trackRef}
         className="flex h-full will-change-transform"
-        style={{ width: `${solutions.length * 100}vw` }}
+        style={{ width: `${solutions.length * 100}%` }}
       >
         {solutions.map((sol, i) => (
           <div
             key={i}
-            className={`relative flex-shrink-0 w-screen h-full flex items-center justify-center bg-gradient-to-br ${sol.bg}`}
+            className={`relative flex-shrink-0 h-full flex items-center justify-center bg-gradient-to-br ${sol.bg}`}
+            style={{ width: `${100 / solutions.length}%` }}
           >
             {/* Dot grid background */}
             <div

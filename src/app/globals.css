@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-warm: #F5F7FA;
+  --color-warm-2: #E4E8F0;
+  
+  --color-primary-dark: #0F172A;
+  --color-primary-darker: #020617;
+  --color-primary-glow: rgba(15, 23, 42, 0.08);
+
+  --color-accent-green: #10B981;
+  --color-accent-green-hover: #059669;
+  --color-accent-green-pale: rgba(16, 185, 129, 0.1);
+  --color-accent-green-glow: rgba(16, 185, 129, 0.18);
+
+  --color-gold: #B8892A;
+  --color-gold-light: #D4A840;
+
+  --color-text-1: #0F172A;
+  --color-text-2: #334155;
+  --color-text-3: #64748B;
+  --color-text-4: #94A3B8;
+
+  --color-border-subtle: rgba(3, 15, 38, 0.08);
+  --color-border-h: rgba(3, 15, 38, 0.15);
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #0F172A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Base utility overrides if needed */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.glass-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mouse-tracking glow card */
+.glow-card .glow-overlay {
+  background: radial-gradient(
+    250px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(16, 185, 129, 0.10),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.glow-card:hover .glow-overlay {
+  opacity: 1;
+}
+
+/* GSAP will-change hint */
+.will-change-transform {
+  will-change: transform;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Smooth scrollbar for Lenis */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}

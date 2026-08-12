@@ -113,17 +113,20 @@ export default function Hero() {
         />
       </div>
 
-      {/* ── Left gradient only — right side shows building clearly ── */}
-      <div className="absolute inset-0 z-[1]" style={{
-        background: "linear-gradient(to right, rgba(7,7,8,0.88) 0%, rgba(7,7,8,0.60) 38%, rgba(7,7,8,0.18) 62%, transparent 100%)"
+      {/* ── Gradients ── */}
+      {/* Desktop left gradient for text readability over wide image */}
+      <div className="absolute inset-0 z-[1] hidden sm:block" style={{
+        background: "linear-gradient(to right, rgba(7,7,8,0.85) 0%, rgba(7,7,8,0.40) 45%, transparent 70%)"
       }} />
-      {/* Bottom ramp — readable area for buttons */}
-      <div className="absolute inset-0 z-[1]" style={{
-        background: "linear-gradient(to top, rgba(7,7,8,0.65) 0%, transparent 42%)"
+      {/* Mobile extremely subtle gradients to preserve original image brightness and path glow */}
+      <div className="absolute inset-0 z-[1] sm:hidden" style={{
+        background: "linear-gradient(to right, rgba(7,7,8,0.4) 0%, transparent 60%)"
       }} />
-      {/* Top edge — subtle so sky shows */}
+      <div className="absolute inset-0 z-[1]" style={{
+        background: "linear-gradient(to top, rgba(7,7,8,0.3) 0%, transparent 25%)"
+      }} />
       <div className="absolute top-0 left-0 right-0 h-24 z-[1]" style={{
-        background: "linear-gradient(to bottom, rgba(7,7,8,0.40), transparent)"
+        background: "linear-gradient(to bottom, rgba(7,7,8,0.2), transparent)"
       }} />
 
       {/* ── Black cinematic opener ── */}
@@ -155,24 +158,25 @@ export default function Hero() {
 
             {/* Headline */}
             <h1
-              className="font-sans font-extrabold leading-[0.95] tracking-[-0.03em] mb-4"
+              className="font-sans font-extrabold leading-[0.95] tracking-[-0.03em] mb-4 drop-shadow-2xl"
               style={{ fontSize: "clamp(2.55rem, 7vw, 4.6rem)" }}
             >
               <span className="block overflow-hidden">
-                <span ref={l1} className="block text-white">Your Building</span>
+                <span ref={l1} className="block text-white" style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>Your Building</span>
               </span>
               <span className="block overflow-hidden">
-                <span ref={l2} className="block text-white">Is Built.</span>
+                <span ref={l2} className="block text-white" style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>Is Built.</span>
               </span>
               <span className="block overflow-hidden mt-0.5">
-                <span ref={l3} className="block italic text-[#10B981]">Now Who Runs It?</span>
+                <span ref={l3} className="block italic text-[#10B981]" style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>Now Who Runs It?</span>
               </span>
             </h1>
 
             {/* Description */}
             <p
               ref={descRef}
-              className="font-sans text-[0.88rem] sm:text-[0.94rem] lg:text-base text-white/70 leading-relaxed max-w-[370px] sm:max-w-[430px]"
+              className="font-sans text-[0.88rem] sm:text-[0.94rem] lg:text-base text-white/90 leading-relaxed max-w-[370px] sm:max-w-[430px]"
+              style={{ textShadow: "0 2px 10px rgba(0,0,0,0.6)" }}
             >
               From possession to handover to long-term management — Kana Mirai is your{" "}
               <strong className="font-bold text-white/90">single point of accountability</strong>{" "}

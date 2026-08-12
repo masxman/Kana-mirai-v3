@@ -22,8 +22,8 @@ const solutions = [
     cta: "Talk to Builder Relations →",
     href: "https://wa.me/919620639754?text=Hi%2C%20builder%20interested%20in%20transition%20services.",
     bg: "from-slate-950 to-slate-900",
-    accent: "#10B981",
-    label: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
+    accent: "#FFB800",
+    label: "bg-emerald-500/10 text-yellow-400 border border-emerald-500/20",
   },
   {
     num: "02",
@@ -39,7 +39,7 @@ const solutions = [
     cta: "Get a Free Property Audit →",
     href: "https://wa.me/919620639754?text=Hi%2C%20association%20seeking%20takeover%20support.",
     bg: "from-[#0a1628] to-[#0d1f3c]",
-    accent: "#10B981",
+    accent: "#FFB800",
     label: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
   },
 ];
@@ -77,7 +77,7 @@ export default function Solutions() {
     <section
       ref={sectionRef}
       id="solutions"
-      className="relative overflow-hidden bg-[#050508]"
+      className="relative overflow-hidden bg-[#040814]"
       style={{ height: "100svh" }}
     >
       {/* Section label */}
@@ -142,9 +142,9 @@ export default function Solutions() {
               <ul className="space-y-3 mb-10">
                 {sol.points.map((p, j) => (
                   <li key={j} className="flex items-start gap-3 text-white/80 font-sans text-sm sm:text-base">
-                    <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-accent-green/20 flex items-center justify-center">
+                    <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-accent-gold/20 flex items-center justify-center">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d="M2 5l2.5 2.5L8 2.5" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M2 5l2.5 2.5L8 2.5" stroke="#FFB800" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     {p}
@@ -156,7 +156,7 @@ export default function Solutions() {
                 href={sol.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent-green hover:bg-emerald-400 text-[#050508] font-bold px-8 py-4 rounded-md text-sm transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+                className="inline-flex items-center gap-2 bg-accent-gold hover:bg-yellow-400 text-[#040814] font-bold px-8 py-4 rounded-md text-sm transition-all hover:-translate-y-0.5 hover:shadow-2xl"
               >
                 {sol.cta}
               </a>
@@ -167,7 +167,7 @@ export default function Solutions() {
               {solutions.map((_, k) => (
                 <div
                   key={k}
-                  className={`h-0.5 rounded-full transition-all duration-300 ${k === i ? "w-8 bg-accent-green" : "w-2 bg-white/20"}`}
+                  className={`h-0.5 rounded-full transition-all duration-300 ${k === i ? "w-8 bg-accent-gold" : "w-2 bg-white/20"}`}
                 />
               ))}
             </div>

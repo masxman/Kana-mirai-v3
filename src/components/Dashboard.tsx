@@ -145,7 +145,7 @@ export default function Dashboard() {
           <div className="bento-card group md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl border border-slate-200 bg-primary-dark cursor-default">
             {/* Mouse tracking glow on dark card */}
             <div className="p-8 h-full flex flex-col">
-              <span className="font-mono text-xs tracking-widest text-accent-green uppercase mb-2">
+              <span className="font-mono text-xs tracking-widest text-accent-gold uppercase mb-2">
                 Live Dashboard
               </span>
               <h3 className="font-sans font-bold text-2xl text-white mb-2">Client Portal</h3>
@@ -168,7 +168,7 @@ export default function Dashboard() {
           {/* Feature cards */}
           {features.slice(1).map((feat, i) => (
             <GlowCard key={i} className="bento-card group cursor-default p-6 flex flex-col justify-between">
-              <div className="w-10 h-10 rounded-xl bg-accent-green/10 flex items-center justify-center text-accent-green mb-4">
+              <div className="w-10 h-10 rounded-xl bg-accent-gold/10 flex items-center justify-center text-accent-gold mb-4">
                 {feat.icon}
               </div>
               <div>

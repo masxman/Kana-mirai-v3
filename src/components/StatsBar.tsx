@@ -19,7 +19,7 @@ export default function StatsBar() {
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-white/10">
           {stats.map((stat, i) => (
             <div key={i} className="flex flex-col items-center justify-center p-8 sm:p-12 text-center group hover:bg-white/5 transition-colors">
-              <div className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-accent-green mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-accent-gold mb-3 group-hover:scale-110 transition-transform duration-300">
                 {stat.value}
               </div>
               <div className="font-sans text-xs sm:text-sm font-medium text-text-4 uppercase tracking-wider max-w-[150px]">

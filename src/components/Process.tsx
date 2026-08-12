@@ -77,7 +77,7 @@ export default function Process() {
     <section
       ref={sectionRef}
       id="process"
-      className="relative bg-[#050508] py-24 lg:py-36"
+      className="relative bg-[#040814] py-24 lg:py-36"
     >
       {/* Dot grid */}
       <div
@@ -116,7 +116,7 @@ export default function Process() {
                   y1="0"
                   x2="1"
                   y2="400"
-                  stroke="#10B981"
+                  stroke="#FFB800"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />
@@ -125,7 +125,7 @@ export default function Process() {
               {steps.map((_, i) => (
                 <div
                   key={i}
-                  className="absolute left-[13px] -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-accent-green border-2 border-[#050508]"
+                  className="absolute left-[13px] -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-accent-gold border-2 border-[#040814]"
                   style={{ top: `${(i / (steps.length - 1)) * 380}px` }}
                 />
               ))}
@@ -138,17 +138,17 @@ export default function Process() {
               <div key={i} className="proc-step-item group">
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="font-mono text-xs text-accent-green mb-1">{step.num}</div>
+                    <div className="font-mono text-xs text-accent-gold mb-1">{step.num}</div>
                     <div className="w-px h-full bg-white/5" />
                   </div>
                   <div>
-                    <h3 className="font-sans font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4 group-hover:text-accent-green transition-colors duration-300">
+                    <h3 className="font-sans font-extrabold text-3xl sm:text-4xl text-white tracking-tight mb-4 group-hover:text-accent-gold transition-colors duration-300">
                       {step.title}
                     </h3>
                     <p className="font-sans text-white/50 text-base leading-relaxed mb-4">
                       {step.desc}
                     </p>
-                    <span className="inline-block font-mono text-[10px] uppercase tracking-widest text-accent-green/60 bg-accent-green/5 border border-accent-green/10 px-3 py-1.5 rounded-full">
+                    <span className="inline-block font-mono text-[10px] uppercase tracking-widest text-accent-gold/60 bg-accent-gold/5 border border-accent-gold/10 px-3 py-1.5 rounded-full">
                       {step.detail}
                     </span>
                   </div>

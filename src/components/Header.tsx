@@ -46,7 +46,7 @@ export default function Header() {
               "font-sans font-bold text-lg leading-tight tracking-tight transition-colors duration-300",
               isScrolled ? "text-primary-dark" : "text-white"
             )}>
-              KANA <em className="not-italic text-accent-green">MIRAI</em>
+              KANA <em className="not-italic text-accent-gold">MIRAI</em>
             </span>
             <small className={cn(
               "font-mono text-[0.6rem] uppercase tracking-wider transition-colors duration-300",
@@ -63,27 +63,27 @@ export default function Header() {
           isScrolled ? "text-text-2" : "text-white/70"
         )}>
           <li>
-            <Link href="#solutions" className={cn("hover:text-accent-green transition-colors", isScrolled ? "" : "hover:text-white")}>
+            <Link href="#solutions" className={cn("hover:text-accent-gold transition-colors", isScrolled ? "" : "hover:text-white")}>
               Solutions
             </Link>
           </li>
           <li>
-            <Link href="#services" className={cn("hover:text-accent-green transition-colors", isScrolled ? "" : "hover:text-white")}>
+            <Link href="#services" className={cn("hover:text-accent-gold transition-colors", isScrolled ? "" : "hover:text-white")}>
               Services
             </Link>
           </li>
           <li>
-            <Link href="#process" className={cn("hover:text-accent-green transition-colors", isScrolled ? "" : "hover:text-white")}>
+            <Link href="#process" className={cn("hover:text-accent-gold transition-colors", isScrolled ? "" : "hover:text-white")}>
               Process
             </Link>
           </li>
           <li>
-            <Link href="#why-us" className={cn("hover:text-accent-green transition-colors", isScrolled ? "" : "hover:text-white")}>
+            <Link href="#why-us" className={cn("hover:text-accent-gold transition-colors", isScrolled ? "" : "hover:text-white")}>
               Why Us
             </Link>
           </li>
           <li>
-            <Link href="#contact" className={cn("hover:text-accent-green transition-colors", isScrolled ? "" : "hover:text-white")}>
+            <Link href="#contact" className={cn("hover:text-accent-gold transition-colors", isScrolled ? "" : "hover:text-white")}>
               Contact
             </Link>
           </li>
@@ -95,7 +95,7 @@ export default function Header() {
             href="https://wa.me/919620639754?text=Hi%20Kana%20Mirai"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center justify-center gap-2 bg-accent-green hover:bg-emerald-400 text-[#050508] px-5 py-2.5 rounded-md font-sans font-bold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            className="hidden sm:inline-flex items-center justify-center gap-2 bg-accent-gold hover:bg-yellow-400 text-[#040814] px-5 py-2.5 rounded-md font-sans font-bold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             <MessageCircle size={16} />
             WhatsApp Us
@@ -163,7 +163,7 @@ export default function Header() {
           <li>
             <a
               href="https://wa.me/919620639754?text=Hi%20Kana%20Mirai"
-              className="inline-flex items-center gap-2 text-accent-green"
+              className="inline-flex items-center gap-2 text-accent-gold"
               onClick={() => setIsMenuOpen(false)}
             >
               <MessageCircle size={18} />

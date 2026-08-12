@@ -54,7 +54,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="relative min-h-screen overflow-hidden bg-[#050508]"
+      className="relative min-h-screen overflow-hidden bg-[#040814]"
     >
       {/* Background image that crossfades */}
       <div className="absolute inset-0 z-0">
@@ -71,12 +71,12 @@ export default function Services() {
               className="object-cover scale-105"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-[#050508]/80" />
+            <div className="absolute inset-0 bg-[#040814]/80" />
           </div>
         ))}
         {/* Default dark when nothing hovered */}
         <div
-          className="absolute inset-0 bg-[#050508] transition-opacity duration-700"
+          className="absolute inset-0 bg-[#040814] transition-opacity duration-700"
           style={{ opacity: activeIndex === null ? 1 : 0 }}
         />
       </div>
@@ -117,12 +117,12 @@ export default function Services() {
               className="group flex items-center gap-6 border-b border-white/10 py-6 lg:py-8 cursor-default transition-all duration-300 hover:px-4"
             >
               {/* Number */}
-              <span className="font-mono text-xs text-white/20 w-8 flex-shrink-0 group-hover:text-accent-green transition-colors">
+              <span className="font-mono text-xs text-white/20 w-8 flex-shrink-0 group-hover:text-accent-gold transition-colors">
                 {srv.num}
               </span>
 
               {/* Category pill */}
-              <span className="hidden sm:block font-mono text-[10px] uppercase tracking-widest text-white/30 border border-white/10 px-2 py-1 rounded w-32 text-center flex-shrink-0 group-hover:border-accent-green/30 group-hover:text-accent-green/70 transition-all">
+              <span className="hidden sm:block font-mono text-[10px] uppercase tracking-widest text-white/30 border border-white/10 px-2 py-1 rounded w-32 text-center flex-shrink-0 group-hover:border-accent-gold/30 group-hover:text-accent-gold/70 transition-all">
                 {srv.category}
               </span>
 
@@ -143,7 +143,7 @@ export default function Services() {
               </p>
 
               {/* Arrow */}
-              <div className="flex-shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/20 group-hover:border-accent-green group-hover:text-accent-green transition-all duration-300 group-hover:translate-x-1">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/20 group-hover:border-accent-gold group-hover:text-accent-gold transition-all duration-300 group-hover:translate-x-1">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>

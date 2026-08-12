@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="antialiased font-sans bg-[#050508] text-white overflow-x-hidden w-full">
+      <body className="antialiased font-sans bg-[#040814] text-white overflow-x-hidden w-full">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

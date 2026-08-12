@@ -57,7 +57,7 @@ export default function WhyUs() {
                 <span className="font-mono text-xs text-text-4 group-hover:text-white/30 transition-colors">
                   {item.num}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-accent-green bg-accent-green/10 border border-accent-green/20 px-2 py-1 rounded-full">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-accent-gold bg-accent-gold/10 border border-accent-gold/20 px-2 py-1 rounded-full">
                   {item.pill}
                 </span>
               </div>

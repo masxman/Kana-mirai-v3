@@ -10,12 +10,12 @@ export default function Footer() {
       {/* Contact / CTA Section */}
       <section
         id="contact"
-        className="relative bg-[#050508] py-24 lg:py-36 overflow-hidden"
+        className="relative bg-[#040814] py-24 lg:py-36 overflow-hidden"
       >
         {/* Green glow */}
         <div
           className="absolute inset-0 opacity-10 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 80% 50% at 50% 100%, #10B981, transparent)" }}
+          style={{ background: "radial-gradient(ellipse 80% 50% at 50% 100%, #FFB800, transparent)" }}
         />
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8 xl:px-12">
@@ -28,7 +28,7 @@ export default function Footer() {
               </span>
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tighter leading-none mb-8">
                 Ready to<br />
-                <span className="text-accent-green">Transition?</span>
+                <span className="text-accent-gold">Transition?</span>
               </h2>
               <p className="font-sans text-white/50 text-lg leading-relaxed mb-12 max-w-sm">
                 Let&apos;s talk about your project — whether it&apos;s a fresh handover or a long-term management contract.
@@ -41,12 +41,12 @@ export default function Footer() {
                   { icon: <MapPin size={16} />, label: "Nagarabhavi, Bengaluru", sub: "560072, Karnataka", href: null },
                 ].map((c, i) => (
                   <div key={i} className="flex items-center gap-4 group">
-                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-green flex-shrink-0 group-hover:bg-accent-green/10 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-accent-gold flex-shrink-0 group-hover:bg-accent-gold/10 transition-colors">
                       {c.icon}
                     </div>
                     <div>
                       {c.href ? (
-                        <a href={c.href} className="font-sans font-semibold text-white hover:text-accent-green transition-colors block">
+                        <a href={c.href} className="font-sans font-semibold text-white hover:text-accent-gold transition-colors block">
                           {c.label}
                         </a>
                       ) : (
@@ -72,7 +72,7 @@ export default function Footer() {
             {/* Right — contact form */}
             <div className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-8 lg:p-10 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-8">
-                <span className="font-mono text-xs uppercase tracking-widest text-accent-green">
+                <span className="font-mono text-xs uppercase tracking-widest text-accent-gold">
                   Contact Us
                 </span>
                 <div className="flex-1 h-px bg-white/10" />
@@ -93,7 +93,7 @@ export default function Footer() {
                       placeholder={f.placeholder}
                       autoComplete={f.autoComplete}
                       required
-                      className="w-full bg-white/[0.05] border border-white/10 text-white placeholder-white/20 rounded-lg px-4 py-3 font-sans text-sm focus:outline-none focus:border-accent-green/50 focus:bg-white/[0.08] transition-all"
+                      className="w-full bg-white/[0.05] border border-white/10 text-white placeholder-white/20 rounded-lg px-4 py-3 font-sans text-sm focus:outline-none focus:border-accent-gold/50 focus:bg-white/[0.08] transition-all"
                     />
                   </div>
                 ))}
@@ -103,7 +103,7 @@ export default function Footer() {
                   <select
                     id="cRole"
                     required
-                    className="w-full bg-white/[0.05] border border-white/10 text-white/80 rounded-lg px-4 py-3 font-sans text-sm focus:outline-none focus:border-accent-green/50 transition-all appearance-none"
+                    className="w-full bg-white/[0.05] border border-white/10 text-white/80 rounded-lg px-4 py-3 font-sans text-sm focus:outline-none focus:border-accent-gold/50 transition-all appearance-none"
                   >
                     <option value="" disabled className="bg-slate-900">Select your role</option>
                     <option value="builder" className="bg-slate-900">Builder / Developer</option>
@@ -118,14 +118,14 @@ export default function Footer() {
                     id="cMsg"
                     rows={3}
                     placeholder="Tell us about your project..."
-                    className="w-full bg-white/[0.05] border border-white/10 text-white placeholder-white/20 rounded-lg px-4 py-3 font-sans text-sm focus:outline-none focus:border-accent-green/50 transition-all resize-none"
+                    className="w-full bg-white/[0.05] border border-white/10 text-white placeholder-white/20 rounded-lg px-4 py-3 font-sans text-sm focus:outline-none focus:border-accent-gold/50 transition-all resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   id="contactSubmit"
-                  className="w-full bg-accent-green hover:bg-emerald-400 text-[#050508] font-bold py-4 rounded-lg text-sm transition-all hover:-translate-y-0.5 hover:shadow-xl"
+                  className="w-full bg-accent-gold hover:bg-yellow-400 text-[#040814] font-bold py-4 rounded-lg text-sm transition-all hover:-translate-y-0.5 hover:shadow-xl"
                 >
                   Send Enquiry →
                 </button>
@@ -150,7 +150,7 @@ export default function Footer() {
               />
               <div>
                 <div className="font-sans font-bold text-white text-sm tracking-tight">
-                  KANA <em className="not-italic text-accent-green">MIRAI</em>
+                  KANA <em className="not-italic text-accent-gold">MIRAI</em>
                 </div>
                 <div className="font-mono text-[10px] text-white/30 uppercase tracking-wider">
                   Transitioning Properties, Sustaining Excellence.

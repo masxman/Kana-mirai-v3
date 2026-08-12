@@ -11,10 +11,10 @@
   --color-primary-darker: #020617;
   --color-primary-glow: rgba(15, 23, 42, 0.08);
 
-  --color-accent-green: #10B981;
-  --color-accent-green-hover: #059669;
-  --color-accent-green-pale: rgba(16, 185, 129, 0.1);
-  --color-accent-green-glow: rgba(16, 185, 129, 0.18);
+  --color-accent-gold: #FFB800;
+  --color-accent-gold-hover: #E5A600;
+  --color-accent-gold-pale: rgba(255, 184, 0, 0.1);
+  --color-accent-gold-glow: rgba(255, 184, 0, 0.18);
 
   --color-gold: #B8892A;
   --color-gold-light: #D4A840;
@@ -29,17 +29,17 @@
 }
 
 :root {
-  --background: #050508;
+  --background: #040814;
   --foreground: #0F172A;
 }
 
 html {
-  background-color: #050508;
+  background-color: #040814;
   overscroll-behavior: none;
 }
 
 body {
-  background-color: #050508;
+  background-color: #040814;
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -65,7 +65,7 @@ body {
 .glow-card .glow-overlay {
   background: radial-gradient(
     250px circle at var(--glow-x, 50%) var(--glow-y, 50%),
-    rgba(16, 185, 129, 0.10),
+    rgba(255, 184, 0, 0.10),
     transparent 70%
   );
   opacity: 0;

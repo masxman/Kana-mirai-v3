@@ -121,31 +121,23 @@ export default function Hero() {
       <div ref={coverRef} className="absolute inset-0 z-[2] bg-[#070708]" />
 
       {/* ════════════════════════════════════════
-          CONTENT — Proper flex structure:
-          Outer: flex-col, full height
-            ├── [fixed top spacer] — shows photo above tag
-            └── [flex-1 inner] — flex-col, fills remaining height
-                  ├── tag
-                  ├── headline
-                  ├── description
-                  ├── [flex-1 gap] — shows building between desc & buttons
-                  └── buttons + bottom padding
+          CONTENT — Safe Flex Structure
          ════════════════════════════════════════ */}
       <div className="absolute inset-0 z-10 flex flex-col">
 
-        {/* Fixed top spacer — photo (sky + top of building) visible here */}
-        <div className="flex-shrink-0 h-[30svh] lg:h-[20svh]" />
+        {/* Reduced top spacer on mobile to ensure content fits */}
+        <div className="flex-shrink-0 h-[18svh] lg:h-[22svh]" />
 
-        {/* Inner area — fills remaining height, is ITSELF a flex-col */}
-        <div className="flex-1 flex flex-col px-5 sm:px-8 xl:px-14">
+        {/* Inner area — flex-1 with mt-auto on buttons to push them down securely */}
+        <div className="flex flex-col flex-1 px-5 sm:px-8 xl:px-14 pb-10 sm:pb-14 lg:pb-16">
 
-          {/* Width cap on desktop only */}
+          {/* Width cap on desktop */}
           <div className="flex flex-col flex-1 lg:max-w-[52%] xl:max-w-[46%]">
 
             {/* Tag */}
             <div
               ref={tagRef}
-              className="inline-flex self-start items-center gap-2.5 bg-black/30 backdrop-blur-md border border-white/10 text-white font-mono text-[0.6rem] sm:text-[0.68rem] uppercase tracking-[0.22em] px-3.5 py-2 rounded-full mb-4 sm:mb-5"
+              className="inline-flex self-start items-center gap-2.5 bg-black/30 backdrop-blur-md border border-white/10 text-white font-mono text-[0.6rem] sm:text-[0.68rem] uppercase tracking-[0.22em] px-3.5 py-2 rounded-full mb-4"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] shadow-[0_0_8px_rgba(16,185,129,1)] animate-pulse flex-shrink-0" />
               Bengaluru //&nbsp;
@@ -154,7 +146,7 @@ export default function Hero() {
 
             {/* Headline */}
             <h1
-              className="font-sans font-extrabold leading-[0.95] tracking-[-0.03em] mb-4 sm:mb-5"
+              className="font-sans font-extrabold leading-[0.95] tracking-[-0.03em] mb-4"
               style={{ fontSize: "clamp(2.55rem, 7vw, 4.6rem)" }}
             >
               <span className="block overflow-hidden">
@@ -178,12 +170,8 @@ export default function Hero() {
               for residential communities.
             </p>
 
-            {/* ─── Elastic gap: shows building/driveway between desc & buttons ─── */}
-            {/* flex-1 here WORKS because this div's parent is flex-col flex-1 */}
-            <div className="flex-1" style={{ minHeight: "4svh", maxHeight: "22svh" }} />
-
-            {/* Buttons */}
-            <div ref={btnsRef} className="flex flex-col items-start gap-[10px] pb-10 sm:pb-14 lg:pb-16">
+            {/* Buttons pushed to bottom using mt-auto */}
+            <div ref={btnsRef} className="mt-auto pt-6 flex flex-col items-start gap-3">
               <Btn href="#solutions" variant="primary">
                 I&apos;m a Builder
                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none">

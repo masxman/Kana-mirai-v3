@@ -95,7 +95,7 @@ export default function Header() {
             href="https://wa.me/919620639754?text=Hi%20Kana%20Mirai"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center justify-center gap-2 bg-accent-gold hover:bg-yellow-400 text-[#040814] px-5 py-2.5 rounded-md font-sans font-bold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
+            className="hidden sm:inline-flex items-center justify-center gap-2 bg-glitter-gold px-5 py-2.5 rounded-md font-sans font-bold text-sm transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >
             <MessageCircle size={16} />
             WhatsApp Us

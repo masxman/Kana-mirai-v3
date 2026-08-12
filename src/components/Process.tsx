@@ -116,7 +116,7 @@ export default function Process() {
                   y1="0"
                   x2="1"
                   y2="400"
-                  stroke="#FFB800"
+                  stroke="#D4AF37"
                   strokeWidth="2"
                   strokeLinecap="round"
                 />

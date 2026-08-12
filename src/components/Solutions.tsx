@@ -22,8 +22,8 @@ const solutions = [
     cta: "Talk to Builder Relations →",
     href: "https://wa.me/919620639754?text=Hi%2C%20builder%20interested%20in%20transition%20services.",
     bg: "from-slate-950 to-slate-900",
-    accent: "#FFB800",
-    label: "bg-emerald-500/10 text-yellow-400 border border-emerald-500/20",
+    accent: "#D4AF37",
+    label: "bg-emerald-500/10 text-yellow-500 border border-emerald-500/20",
   },
   {
     num: "02",
@@ -39,7 +39,7 @@ const solutions = [
     cta: "Get a Free Property Audit →",
     href: "https://wa.me/919620639754?text=Hi%2C%20association%20seeking%20takeover%20support.",
     bg: "from-[#0a1628] to-[#0d1f3c]",
-    accent: "#FFB800",
+    accent: "#D4AF37",
     label: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
   },
 ];
@@ -145,7 +145,7 @@ export default function Solutions() {
                   <li key={j} className="flex items-start gap-3 text-white/80 font-sans text-sm sm:text-base">
                     <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-accent-gold/20 flex items-center justify-center">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                        <path d="M2 5l2.5 2.5L8 2.5" stroke="#FFB800" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M2 5l2.5 2.5L8 2.5" stroke="#D4AF37" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>
                     {p}
@@ -157,7 +157,7 @@ export default function Solutions() {
                 href={sol.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent-gold hover:bg-yellow-400 text-[#040814] font-bold px-8 py-4 rounded-md text-sm transition-all hover:-translate-y-0.5 hover:shadow-2xl"
+                className="inline-flex items-center gap-2 bg-glitter-gold font-bold px-8 py-4 rounded-md text-sm transition-all hover:-translate-y-0.5 hover:shadow-2xl"
               >
                 {sol.cta}
               </a>

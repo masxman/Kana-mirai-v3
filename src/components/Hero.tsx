@@ -54,7 +54,7 @@ function Btn({ href, children, variant = "primary" }: {
 
   const base = "inline-flex items-center justify-center gap-2 font-bold text-[0.95rem] px-7 py-4 rounded-xl cursor-pointer select-none transition-all w-full sm:w-auto sm:min-w-[220px]";
   const styles = variant === "primary"
-    ? `${base} bg-[#FFB800] hover:bg-yellow-400 text-[#040814]`
+    ? `${base} bg-glitter-gold`
     : `${base} bg-transparent border border-white/35 hover:border-white/60 text-white`;
 
   return <a ref={ref} href={href} className={styles}>{children}</a>;
@@ -151,7 +151,7 @@ export default function Hero() {
               ref={tagRef}
               className="inline-flex self-start items-center gap-2.5 bg-black/30 backdrop-blur-md border border-white/10 text-white font-mono text-[0.6rem] sm:text-[0.68rem] uppercase tracking-[0.22em] px-3.5 py-2 rounded-full mb-4"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FFB800] shadow-[0_0_8px_rgba(16,185,129,1)] animate-pulse flex-shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,1)] animate-pulse flex-shrink-0" />
               Bengaluru //&nbsp;
               <span ref={scramble} className="text-white/80">Integrated FM</span>
             </div>
@@ -168,7 +168,7 @@ export default function Hero() {
                 <span ref={l2} className="block text-white" style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>Is Built.</span>
               </span>
               <span className="block overflow-hidden mt-0.5">
-                <span ref={l3} className="block italic text-[#FFB800]" style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>Now Who Runs It?</span>
+                <span ref={l3} className="block italic text-[#D4AF37]" style={{ textShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>Now Who Runs It?</span>
               </span>
             </h1>
 

@@ -4,8 +4,8 @@ const path = require('path');
 const directoryPath = path.join(__dirname, 'src');
 
 const replacements = [
-  { find: /#059669/g, replace: '#E5A600' },
-  { find: /16, 185, 129/g, replace: '255, 184, 0' }
+  { find: /bg-accent-gold hover:bg-yellow-500 text-\[#040814\]/g, replace: 'bg-glitter-gold' },
+  { find: /rgba\(16,185,129,1\)/g, replace: 'rgba(212,175,55,1)' }
 ];
 
 function walk(dir) {
@@ -43,4 +43,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`Replaced colors in ${changedCount} files.`);
+console.log(`Replaced button classes in ${changedCount} files.`);

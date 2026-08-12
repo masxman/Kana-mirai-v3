@@ -11,10 +11,10 @@
   --color-primary-darker: #020617;
   --color-primary-glow: rgba(15, 23, 42, 0.08);
 
-  --color-accent-gold: #FFB800;
-  --color-accent-gold-hover: #E5A600;
-  --color-accent-gold-pale: rgba(255, 184, 0, 0.1);
-  --color-accent-gold-glow: rgba(255, 184, 0, 0.18);
+  --color-accent-gold: #D4AF37;
+  --color-accent-gold-hover: #B5952F;
+  --color-accent-gold-pale: rgba(212, 175, 55, 0.1);
+  --color-accent-gold-glow: rgba(212, 175, 55, 0.18);
 
   --color-gold: #B8892A;
   --color-gold-light: #D4A840;
@@ -65,7 +65,7 @@ body {
 .glow-card .glow-overlay {
   background: radial-gradient(
     250px circle at var(--glow-x, 50%) var(--glow-y, 50%),
-    rgba(255, 184, 0, 0.10),
+    rgba(212, 175, 55, 0.10),
     transparent 70%
   );
   opacity: 0;
@@ -99,3 +99,29 @@ html.lenis {
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
+
+/* Glittery Metallic Gold Classes */
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.bg-glitter-gold {
+  background: linear-gradient(
+    110deg,
+    #B8892A 0%,
+    #D4AF37 20%,
+    #FFF2A8 40%,
+    #FDF5A9 50%,
+    #D4AF37 60%,
+    #B8892A 100%
+  );
+  background-size: 200% auto;
+  transition: all 0.4s ease;
+  color: #040814 !important;
+}
+.bg-glitter-gold:hover {
+  animation: shimmer 1.5s infinite linear;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+

@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Green glow */}
         <div
           className="absolute inset-0 opacity-10 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 80% 50% at 50% 100%, #FFB800, transparent)" }}
+          style={{ background: "radial-gradient(ellipse 80% 50% at 50% 100%, #D4AF37, transparent)" }}
         />
 
         <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8 xl:px-12">
@@ -125,7 +125,7 @@ export default function Footer() {
                 <button
                   type="submit"
                   id="contactSubmit"
-                  className="w-full bg-accent-gold hover:bg-yellow-400 text-[#040814] font-bold py-4 rounded-lg text-sm transition-all hover:-translate-y-0.5 hover:shadow-xl"
+                  className="w-full bg-glitter-gold font-bold py-4 rounded-lg text-sm transition-all hover:-translate-y-0.5 hover:shadow-xl"
                 >
                   Send Enquiry →
                 </button>

@@ -207,12 +207,12 @@ export default function Hero() {
             for residential communities.
           </p>
 
-          {/* CTAs — NOT full width, auto size matching reference design */}
-          <div ref={btnsRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+          {/* CTAs — auto-width, NOT full-width */}
+          <div ref={btnsRef} className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
             {/* Primary — Green */}
             <MagneticButton
               href="#solutions"
-              className="inline-flex items-center justify-center gap-2 bg-accent-green hover:bg-emerald-400 text-[#050508] font-bold px-8 py-4 rounded-lg text-sm sm:text-base transition-colors cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-accent-green hover:bg-emerald-400 text-[#050508] font-bold px-8 py-4 rounded-lg text-sm sm:text-base transition-colors cursor-pointer min-w-[200px]"
             >
               I&apos;m a Builder
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -223,7 +223,7 @@ export default function Hero() {
             {/* Secondary — outline */}
             <MagneticButton
               href="#solutions"
-              className="inline-flex items-center justify-center bg-transparent border border-white/30 hover:border-white/60 hover:bg-white/5 text-white font-semibold px-8 py-4 rounded-lg text-sm sm:text-base transition-all cursor-pointer"
+              className="inline-flex items-center justify-center bg-transparent border border-white/30 hover:border-white/60 hover:bg-white/5 text-white font-semibold px-8 py-4 rounded-lg text-sm sm:text-base transition-all cursor-pointer min-w-[200px]"
             >
               I&apos;m an Association
             </MagneticButton>

@@ -29,12 +29,16 @@
 }
 
 :root {
-  --background: #FFFFFF;
+  --background: #050508;
   --foreground: #0F172A;
 }
 
+html {
+  background-color: #050508;
+}
+
 body {
-  background-color: var(--background);
+  background-color: #050508;
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

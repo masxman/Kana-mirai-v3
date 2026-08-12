@@ -33,16 +33,13 @@ export default function Header() {
       )}
     >
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-12 h-12 flex-shrink-0">
-            <Image
-              src="/assets/images/logo.png"
-              alt="Kana Mirai Logo"
-              width={48}
-              height={48}
-              className="w-full h-full object-contain"
-            />
+        {/* Logo — hidden on mobile until scrolled */}
+        <Link href="/" className={cn(
+          "flex items-center gap-3 transition-all duration-500",
+          !isScrolled && "opacity-0 pointer-events-none sm:opacity-100 sm:pointer-events-auto"
+        )}>
+          <div className="w-11 h-11 flex-shrink-0">
+            <Image src="/assets/images/logo.png" alt="Kana Mirai Logo" width={44} height={44} className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col">
             <span className={cn(
@@ -52,7 +49,7 @@ export default function Header() {
               KANA <em className="not-italic text-accent-green">MIRAI</em>
             </span>
             <small className={cn(
-              "font-mono text-[0.65rem] uppercase tracking-wider transition-colors duration-300",
+              "font-mono text-[0.6rem] uppercase tracking-wider transition-colors duration-300",
               isScrolled ? "text-text-3" : "text-white/50"
             )}>
               Integrated Facility Solutions

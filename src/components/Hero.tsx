@@ -95,11 +95,20 @@ export default function Hero() {
 
       {/* ── Background photo ── */}
       <div className="hero-photo absolute inset-0 z-0">
+        {/* Mobile background (the vertical crop you provided) */}
+        <Image
+          src="/assets/images/hero-mobile-bg.jpg"
+          alt="Modern residential community"
+          fill priority
+          className="object-cover object-center block sm:hidden"
+          sizes="100vw"
+        />
+        {/* Desktop background (the wider landscape image) */}
         <Image
           src="/assets/images/hero-bg.png"
           alt="Modern residential community"
           fill priority
-          className="object-cover object-center"
+          className="object-cover object-center hidden sm:block"
           sizes="100vw"
         />
       </div>
